@@ -18,7 +18,7 @@ def conectar_cassandra(hosts=["127.0.0.1"], keyspace="bdnr_cassandra", port=9042
         cluster = Cluster(contact_points=hosts, port=port)
         session = cluster.connect()
 
-        # Crear el keyspace si no existe
+        
         session.execute(f"""
         CREATE KEYSPACE IF NOT EXISTS {keyspace}
         WITH replication = {{'class': 'SimpleStrategy', 'replication_factor': 1}}
@@ -45,5 +45,6 @@ if __name__ == "__main__":
     mongo_db = conectar_mongodb()
     cassandra_session = conectar_cassandra()
     dgraph_client = conectar_dgraph()
+
 
 
