@@ -22,53 +22,53 @@ def main_menu():
 # MongoDB
 def mongodb_menu():
     consultas = [
-        "Registro de productos",
-        "Registro de usuario",
-        "Gestión del carrito de compras",
-        "Consulta del carrito",
-        "Consulta de productos por rango de precio (general)",
-        "Consulta por rango de precio (producto específico)",
-        "Consulta los productos 'nuevos lanzamientos'",
-        "Consulta de productos por categoría",
-        "Consulta de productos disponibles",
-        "Consulta de wishlist de un usuario específico"
+            "1. Registro de productos",
+            "2. Registro de usuario",
+            "3. Gestión del carrito de compras",
+            "4. Consulta del carrito",
+            "5. Consulta de productos por rango de precio (general)",
+            "6. Consulta por rango de precio (producto específico)",
+            "7. Consulta los productos 'nuevos lanzamientos'",
+            "8. Consulta de productos por categoría",     
+            "9. Consulta de productos disponibles",
+            "10.Consulta de wishlist de un usuario específico"
     ]
     show_submenu("MongoDB", consultas)
 
 # Dgraph
 def dgraph_menu():
     consultas = [
-        "Registro de reseñas",
-        "Registro de interacciones",
-        "Recomendación basada en historial de compras",
-        "Recomendaciones de productos similares",
-        "Consulta de productos populares",
-        "Recomendación por usuarios similares",
-        "Recomendación por reseñas",
-        "Análisis de comportamiento de navegación",
-        "Recomendación por tendencia",
-        "Recomendación por abandono de carrito"
+        "1. Registro de reseñas",
+        "2. Registro de interacciones",
+        "3. Recomendación basada en historial de compras",
+        "4. Recomendaciones de productos similares",
+        "5. Consulta de productos populares",
+        "6. Recomendación por usuarios similares",
+        "7. Recomendación por reseñas",
+        "8. Análisis de comportamiento de navegación",
+        "9. Recomendación por tendencia",
+        "10.Recomendación por abandono de carrito"
     ]
     show_submenu("Dgraph", consultas)
 
 # Cassandra
 def cassandra_menu():
     consultas = [
-        "Registro de vistas de productos",
-        "Historial de búsqueda",
-        "Registro de compras",
-        "Tiempo de permanencia",
-        "Clics en recomendaciones",
-        "Productos en carritos",
-        "Abandono de carrito",
-        "Interacciones con filtros",
-        "Sesiones de navegación",
-        "Productos vistos no comprados",
-        "Recomendaciones mostradas",
-        "Wishlist",
-        "Comparación de productos",
-        "Métricas por categoría",
-        "Feedback sobre recomendaciones"
+        "1. Registro de vistas de productos",
+        "2. Historial de búsqueda",
+        "3. Registro de compras",
+        "4. Tiempo de permanencia",
+        "5. Clics en recomendaciones",
+        "6. Productos en carritos",
+        "7. Abandono de carrito",
+        "8. Interacciones con filtros",
+        "9. Sesiones de navegación",
+        "10.Productos vistos no comprados",
+        "11.Recomendaciones mostradas",
+        "12.Wishlist",
+        "13.Comparación de productos",
+        "14.Métricas por categoría",
+        "15.Feedback sobre recomendaciones"
     ]
     show_submenu("Cassandra", consultas)
 
