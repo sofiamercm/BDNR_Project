@@ -38,14 +38,14 @@ def mongodb_menu():
 # Dgraph
 def dgraph_menu():
     consultas = [
-        "1. Registro de reseñas",
+        "1. Obtener reseñas de un producto",
         "2. Registro de interacciones",
         "3. Recomendación basada en historial de compras",
         "4. Recomendaciones de productos similares",
         "5. Consulta de productos populares",
         "6. Recomendación por usuarios similares",
         "7. Recomendación por reseñas",
-        "8. Análisis de comportamiento de navegación",
+        "8. Análisis de comportamiento",
         "9. Recomendación por tendencia",
         "10.Recomendación por abandono de carrito"
     ]

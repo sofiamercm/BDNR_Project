@@ -96,7 +96,7 @@ def set_schema(client):
     
 # QUERIES
 
-# Obtener reseñas de un producto
+# 1. Obtener reseñas de un producto
 def get_reviews(client, product_uid):
     query = """
     query getReviews($pid: string) {
@@ -118,7 +118,7 @@ def get_reviews(client, product_uid):
     res = client.txn(read_only=True).query(query, variables)
     return res.json
 
-# Registro de interacciones (view, click, purchase)
+# 2. Registro de interacciones (view, click, purchase)
 def get_user_interactions(client, user_uid):
     query = """
     query userInteractions($uid: string) {
@@ -139,7 +139,7 @@ def get_user_interactions(client, user_uid):
     res = client.txn(read_only=True).query(query, variables)
     return res.json
 
-# Recomendación basada en historial de compras
+# 3. Recomendación basada en historial de compras
 def get_purchase_recommendations(client, user_uid):
     query = """
     query recommendations($uid: string) {
@@ -158,7 +158,7 @@ def get_purchase_recommendations(client, user_uid):
     res = client.txn(read_only=True).query(query, variables)
     return res.json
 
-# Recomendación basada en productos comprados juntos (co-purchase)
+# 4. Recomendación basada en productos comprados juntos (co-purchase)
 def get_copurchased_products(client, product_uid):
     query = """
     query copurchase($pid: string) {
@@ -175,7 +175,7 @@ def get_copurchased_products(client, product_uid):
     res = client.txn(read_only=True).query(query, variables)
     return res.json
 
-# Productos Populares
+# 5. Productos Populares
 # Más comprados
 def get_popular_products(client):
     query = """
@@ -202,7 +202,7 @@ def get_most_viewed_products(client):
     res = client.txn(read_only=True).query(query)
     return res.json
 
-# Recomendación por usuarios similares
+# 6. Recomendación por usuarios similares
 def get_similar_users(client, user_uid):
     query = """
     query similarUsers($uid: string) {
@@ -222,7 +222,7 @@ def get_similar_users(client, user_uid):
     res = client.txn(read_only=True).query(query, variables)
     return res.json
 
-# Recomendación por productos con reseñas rating > 4
+# 7. Recomendación por productos con reseñas rating > 4
 def get_top_rated_products(client):
     query = """
     {
@@ -237,7 +237,7 @@ def get_top_rated_products(client):
     res = client.txn(read_only=True).query(query)
     return res.json
 
-# Análisis de comportamiento (vistas, duración, abandono)
+# 8. Análisis de comportamiento (vistas, duración, abandono)
 def get_product_views(client, product_uid):
     query = """
     query productViews($pid: string) {
@@ -257,7 +257,7 @@ def get_product_views(client, product_uid):
     res = client.txn(read_only=True).query(query, variables)
     return res.json
 
-# Recomendación por tendencia
+# 9. Recomendación por tendencia
 def get_trending_products(client):
     query = """
     {
@@ -273,7 +273,7 @@ def get_trending_products(client):
     res = client.txn(read_only=True).query(query)
     return res.json
 
-# Recomendación por abandono de carrito
+# 10. Recomendación por abandono de carrito
 def get_abandoned_cart_recommendations(client, user_uid):
     query = """
     query abandoned($uid: string) {
